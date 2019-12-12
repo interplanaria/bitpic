@@ -1,0 +1,12 @@
+{
+  "name": "bitpic",
+  "version": "0.0.3",
+  "description": "bitpic protocol validation library",
+  "main": "index.js",
+  "author": "unwriter@protonmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "bpu": "0.0.8",
+    "bsv": "^1.0.0"
+  }
+}
