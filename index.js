@@ -84,9 +84,8 @@ const verify = {
   user: async (res) => {
     const expected = res.cell[3].s
     const paymail = res.cell[1].s
-    const pki = await client.getPublicKey(paymail)
     const pubkey = Buffer.from(res.cell[2].b, "base64").toString("hex")
-    const paymailPubkMatch = (pki === pubkey)
+    const paymailPubkMatch = await verifyPubkeyOwner(pubkey, paymail)
     const address = new bsv.PublicKey(pki).toAddress().toString()
     const hex = Buffer.from(res.hash, "hex")
     const verified = Message.verify(hex, address, expected)
