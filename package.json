@@ -6,7 +6,10 @@
   "author": "unwriter@protonmail.com",
   "license": "ISC",
   "dependencies": {
+    "@moneybutton/paymail-client": "^0.38.1",
     "bpu": "0.0.8",
-    "bsv": "^1.0.0"
+    "bsv": "^1.0.0",
+    "dns": "^0.2.2",
+    "node-fetch": "^2.6.0"
   }
 }
